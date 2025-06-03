@@ -10,7 +10,7 @@ function Contact() {
     e.preventDefault();
     setIsSubmitting(true);
     try {
-      const response = await axios.post('http://localhost:4000/contact', formData, { timeout: 3000 });
+      const response = await axios.post('https://negocio-online-demo.onrender.com/contact', formData, { timeout: 3000 });
       alert(response.data.message);
       setFormData({ name: '', email: '', phone: '', message: '' });
     } catch (error) {
